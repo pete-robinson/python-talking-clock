@@ -61,7 +61,7 @@ flask run
 The terminal will show something along the lines of:
 
 ```
- * Serving Flask app "main.py"
+ * Serving Flask app "app.py"
  * Environment: production
    WARNING: This is a development server. Do not use it in a production deployment.
    Use a production WSGI server instead.
@@ -73,14 +73,14 @@ The app is running on the URL listed in the repsonse from Flask.
 
 ### Making a request
 #### With argument
-URL: `http://127.0.0.1:5000/api/clock/13:40`
+URL: `http://127.0.0.1:5000/api/clock/12:35`
 Will return human-readable representation of the time given.
 
 Successful JSON response:
 
 ```
 {
-	"response": "Twelve minutes past twelve",
+	"response": "Twenty five minutes to one",
 	"status": "OK"
 }
 ```
