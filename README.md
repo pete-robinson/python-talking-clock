@@ -23,8 +23,6 @@ pip install pytest-cov
 
 ## Usage
 ### Command
-Python3 must be installed to your system.
-
 Ensure command is executable:
 
 ```
