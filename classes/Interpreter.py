@@ -1,4 +1,5 @@
 import math
+import datetime
 
 
 class Interpreter:
@@ -35,6 +36,9 @@ class Interpreter:
 
             # we also need to increment the hour by one if the operator is static
             self.hours += 1
+            # cast back to hours so that we still get '1' and not '13' if previous number was 12
+            updated_hours = datetime.datetime.strptime(str(self.hours), "%H").strftime("%I")
+            self.hours = int(updated_hours)
 
         else:
             # minutes are 30 or under - we should use past (20 past 4)
