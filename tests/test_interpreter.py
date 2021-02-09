@@ -50,21 +50,21 @@ class TestInterpreter:
         i = Interpreter(datetime.datetime.strptime("11:00", "%H:%M"))
         i.run()
 
-        assert i.formulate_response() == "eleven o'clock"
+        assert i.build_response() == "eleven o'clock"
 
     # test that response when mins<30 contains 'past'
     def test_response_minutes_past(self):
         i = Interpreter(datetime.datetime.strptime("11:30", "%H:%M"))
         i.run()
 
-        assert ' past ' in i.formulate_response()
+        assert ' past ' in i.build_response()
 
     # test that response when mins<30 contains 'to'
     def test_response_minutes_to(self):
         i = Interpreter(datetime.datetime.strptime("11:43", "%H:%M"))
         i.run()
 
-        assert ' to ' in i.formulate_response()
+        assert ' to ' in i.build_response()
 
     # test that Interpreter throws an error if input value becomes a string
     def test_exception_on_input_string(self):
